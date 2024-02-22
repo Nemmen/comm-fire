@@ -10,9 +10,10 @@ import { collection, getDoc} from "firebase/firestore";
 import { useAuthState } from "react-firebase-hooks/auth";
 
 
-const Signin = () => {
+const Signin = ({setIsLoggedIn}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+ 
   // const [Username, setUsername] = useState("");
 
   
@@ -26,6 +27,7 @@ const Signin = () => {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
+    setIsLoggedIn(true)
     // IdP data available using getAdditionalUserInfo(result)
     // ...
   }).catch((error) => {
@@ -46,7 +48,9 @@ const Signin = () => {
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
+        setIsLoggedIn(true)
         toast.success('Signed Up!');
+        
         // ...
       })
       .catch((error) => {

@@ -19,7 +19,7 @@ const Rightside = () => {
   const [stories, setStories] = useState([]);
   const [entrie, setEntrie] = useState("");
   const [user] = useAuthState(auth);
-  // console.log(user.uid)
+  console.log(user.uid)
   const usersRef = collection(db, "users")
   const storyRef = collection(db, "stories");
   const [desc, setDesc] = useState("");

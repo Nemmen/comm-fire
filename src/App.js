@@ -1,24 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import Error from "./Error";
+import Community from "./components/community/Community";
+import { Toaster } from 'react-hot-toast'
+
+
+const Layout = () => {
+  return (
+    <div className="">
+      
+      <Outlet></Outlet>
+     
+    </div>
+  );
+};
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    errorElement: <Error />,
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Community />,
+      },
+     
+    ],
+  },
+]);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Toaster />
+      <RouterProvider router={router} />
     </div>
+    
   );
 }
 

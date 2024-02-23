@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "./Button";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoCloseOutline } from "react-icons/io5";
+import { FaRegUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -81,6 +82,9 @@ const Navbar = () => {
                 className={`font-poppins  font-normal cursor-pointer text-[18px] `}
               >
                 <Link to="/contact">Contact</Link>
+              </li>
+              <li className="">
+                <FaRegUserCircle className="h-[70px] w-[70px] text-black/25"/>
               </li>
             </ul>
           </div>

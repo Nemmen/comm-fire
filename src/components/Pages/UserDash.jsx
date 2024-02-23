@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
+import { IoHome } from "react-icons/io5";
 const UserDash = () => {
   return (
     <div>
@@ -19,14 +20,20 @@ const UserDash = () => {
         <div className="w-2/12 mr-6">
           <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4">
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
-              <span className="material-icons-outlined float-left pr-2">dashboard</span>
-              Home
-              <span className="material-icons-outlined float-right">keyboard_arrow_right</span>
+              <ul>
+                <li>
+                  <Link to="/Home"><IoHome className='inline-block '/>Home</Link>
+                </li>
+                <li>
+                <Link to="/Community">Community</Link>
+                </li>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+              </ul>
             </a>
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
-              <span className="material-icons-outlined float-left pr-2">tune</span>
-              Some menu item
-              <span className="material-icons-outlined float-right">keyboard_arrow_right</span>
+              
             </a>
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
               <span className="material-icons-outlined float-left pr-2">file_copy</span>

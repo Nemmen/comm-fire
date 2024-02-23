@@ -47,7 +47,7 @@ const router = createBrowserRouter([
         element: <Expert/>
       },
       {
-        path: "/profile",
+        path: "/profile/:id",
         element: <UserDash/>
       }
      

@@ -28,12 +28,12 @@ const Community = () => {
     
     )
     
-  }
+  }else{
   return (
     <div className="w-full py-[40px]">
-      <Signin setIsLoggedIn={setIsLoggedIn}/>
+      <Signin setIsLoggedIn={setIsLoggedIn} />
     </div>
-  )
+  )}
 }
 
 export default Community

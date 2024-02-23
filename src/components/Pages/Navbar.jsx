@@ -42,7 +42,10 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="">
-                <FaRegUserCircle className="h-[50px] w-[50px] text-black/25"/>
+            <Link to="/profile">
+              <FaRegUserCircle className="h-[50px] w-[50px] text-black/25"/>
+            </Link>
+                
               </li>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">

@@ -11,6 +11,7 @@ import Footer from "./components/Pages/Footer";
 import Home from "./components/Pages/Home"
 import Ayurveda from "./components/Pages/Ayurveda"
 import Expert from "./components/Pages/Expert"
+import UserDash from "./components/Pages/UserDash";
 
 const Layout = () => {
   return (
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/expert",
         element: <Expert/>
+      },
+      {
+        path: "/profile",
+        element: <UserDash/>
       }
      
     ],

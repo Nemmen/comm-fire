@@ -41,6 +41,9 @@ const Navbar = () => {
               <Button name="Contact"></Button>
             </Link>
           </li>
+          <li className="">
+                <FaRegUserCircle className="h-[50px] w-[50px] text-black/25"/>
+              </li>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           {toggle ? 
@@ -83,9 +86,12 @@ const Navbar = () => {
               >
                 <Link to="/contact">Contact</Link>
               </li>
-              <li className="">
-                <FaRegUserCircle className="h-[70px] w-[70px] text-black/25"/>
+              <li
+                className={`font-poppins  font-normal cursor-pointer text-[18px] `}
+              >
+                <Link to="/profile">Profile</Link>
               </li>
+              
             </ul>
           </div>
         </div>

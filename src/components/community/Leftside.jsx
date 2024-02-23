@@ -1,14 +1,19 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
 import toast from "react-hot-toast";
 
-const Leftside = () => {
+const Leftside = ({setIsLoggedIn}) => {
 
+  const navigate = useNavigate();
   const logoutHandle = async () => {
+
     await signOut(auth).then(()=>{
+      navigate("/community")
       toast.success(" Logged out successfully!")
+      setIsLoggedIn(false)
+
     }).catch((error) => {
       toast.error(error)
     });

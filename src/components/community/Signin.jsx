@@ -6,11 +6,10 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 import { auth , db  } from "../../firebase";
-import { collection, getDoc} from "firebase/firestore";
-import { useAuthState } from "react-firebase-hooks/auth";
 
 
-const Signin = ({setIsLoggedIn}) => {
+
+const Signin = ({setLog}) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -27,7 +26,7 @@ const Signin = ({setIsLoggedIn}) => {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    // setIsLoggedIn(true)
+    setLog(true)
     // IdP data available using getAdditionalUserInfo(result)
     // ...
   }).catch((error) => {
@@ -48,9 +47,9 @@ const Signin = ({setIsLoggedIn}) => {
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
-        // setIsLoggedIn(true)
+
         toast.success('Signed Up!');
-        
+        setLog(true)
         // ...
       })
       .catch((error) => {

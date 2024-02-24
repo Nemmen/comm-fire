@@ -4,7 +4,7 @@ import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
 import toast from "react-hot-toast";
 
-const Leftside = ({setIsLoggedIn}) => {
+const Leftside = ({ setLog}) => {
 
   const navigate = useNavigate();
   const logoutHandle = async () => {
@@ -12,7 +12,7 @@ const Leftside = ({setIsLoggedIn}) => {
     await signOut(auth).then(()=>{
       navigate("/community")
       toast.success(" Logged out successfully!")
-      // setIsLoggedIn(false)
+      setLog(false)
 
     }).catch((error) => {
       toast.error(error)

@@ -27,7 +27,7 @@ const Signin = ({setIsLoggedIn}) => {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    setIsLoggedIn(true)
+    // setIsLoggedIn(true)
     // IdP data available using getAdditionalUserInfo(result)
     // ...
   }).catch((error) => {
@@ -48,7 +48,7 @@ const Signin = ({setIsLoggedIn}) => {
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
-        setIsLoggedIn(true)
+        // setIsLoggedIn(true)
         toast.success('Signed Up!');
         
         // ...

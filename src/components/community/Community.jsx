@@ -7,17 +7,20 @@ import { auth } from '../../firebase'
 import { useState , useEffect } from 'react'
 
 const Community = () => {
-  const [loggedIn, setIsLoggedIn] = useState(false);
+  // const [loggedIn, setIsLoggedIn] = useState('');
   const user = useAuthState(auth)
-  
-  if(loggedIn){
+  // console.log(loggedIn)
+ 
+
     return(
 
     <div className="w-full py-[40px]">
-      
+      <div className="w-full py-[40px]">
+      <Signin />
+    </div>
         <div className="grid grid-cols-1 md:grid-cols-4">
           <div className="px-6">
-            <Leftside setIsLoggedIn={setIsLoggedIn}  />
+            <Leftside   />
           </div>
           <div className="col-span-3 border-x-2 border-t-slate-800 px-6">
             <Rightside />
@@ -28,12 +31,7 @@ const Community = () => {
     
     )
     
-  }else{
-  return (
-    <div className="w-full py-[40px]">
-      <Signin setIsLoggedIn={setIsLoggedIn} />
-    </div>
-  )}
-}
+  }
+
 
 export default Community

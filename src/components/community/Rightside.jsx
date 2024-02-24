@@ -26,9 +26,6 @@ const Rightside = () => {
   const changeHandle = (e) => {
     setDesc(e.target.value);
   };
-
-
-
   const addHandle = async () => {
     try {
       await addDoc(storyRef , {

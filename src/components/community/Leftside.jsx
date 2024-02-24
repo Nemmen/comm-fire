@@ -12,7 +12,7 @@ const Leftside = ({setIsLoggedIn}) => {
     await signOut(auth).then(()=>{
       navigate("/community")
       toast.success(" Logged out successfully!")
-      setIsLoggedIn(false)
+      // setIsLoggedIn(false)
 
     }).catch((error) => {
       toast.error(error)

@@ -12,12 +12,14 @@ import Home from "./components/Pages/Home"
 import Ayurveda from "./components/Pages/Ayurveda"
 import Expert from "./components/Pages/Expert"
 import UserDash from "./components/Pages/UserDash";
+import ChatBot from "./components/ChatBot";
 
 const Layout = () => {
   return (
     <div className="">
       <Navbar/>
       <Outlet></Outlet>
+      <ChatBot/>
       <Footer/>
      
     </div>

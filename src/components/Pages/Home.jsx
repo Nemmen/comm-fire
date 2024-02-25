@@ -8,7 +8,7 @@ import psych from '../svgs/9.svg'
 import legal from '../svgs/18.svg'
 
 import {Link} from "react-router-dom"
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import SimpleSlider from "./Slider";
 import Card from "./Card";
 import ScrollCarousell from "./ScrollCarousel";

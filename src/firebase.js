@@ -8,13 +8,13 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyBopUcTNZSVbP6FcBvJmFUkrTavELSZGfU",
-  authDomain: "empowermendd.firebaseapp.com",
-  projectId: "empowermendd",
-  storageBucket: "empowermendd.appspot.com",
-  messagingSenderId: "1010759436804",
-  appId: "1:1010759436804:web:8240b01b708b4342f40351",
-  measurementId: "G-Q7MF9DL3L1"
+  apiKey: "AIzaSyBBvZS0QAjWLk8La6S0EimPs_0y6Z9bZ1M",
+  authDomain: "empowermend-justice.firebaseapp.com",
+  projectId: "empowermend-justice",
+  storageBucket: "empowermend-justice.appspot.com",
+  messagingSenderId: "605910864704",
+  appId: "1:605910864704:web:3bf57d48211eb3b4f220a5",
+  measurementId: "G-6DK9LV1HF5"
 };
 
 // Initialize Firebase

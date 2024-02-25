@@ -9,7 +9,7 @@ import { auth , db  } from "../../firebase";
 
 
 
-const Signin = ({setLog}) => {
+const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -26,7 +26,7 @@ const Signin = ({setLog}) => {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    setLog(true)
+    
     // IdP data available using getAdditionalUserInfo(result)
     // ...
   }).catch((error) => {
@@ -49,7 +49,7 @@ const Signin = ({setLog}) => {
         const user = userCredential.user;
 
         toast.success('Signed Up!');
-        setLog(true)
+        
         // ...
       })
       .catch((error) => {

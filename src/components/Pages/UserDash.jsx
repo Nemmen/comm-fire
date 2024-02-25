@@ -20,34 +20,34 @@ const UserDash = () => {
         <div className="w-2/12 mr-6">
           <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4">
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
-              <Link to="/Home">
+              <Link to="/home">
                 <p><IoHome className='inline-block m-auto text-[20px]' /> <span className='opacity-[0] lg:opacity-[100] md:opacity-[100] sm:opacity-0'>Home</span></p>
               </Link>
             </a>
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
-            <Link to="/Home">
+            <Link to="/home">
                 <p><IoHome className='inline-block m-auto text-[20px]' /> <span className='opacity-[0] lg:opacity-[100] md:opacity-[100] sm:opacity-0'>Home</span></p>
               </Link>
             </a>
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
-            <Link to="/Home">
+            <Link to="/home">
                 <p><IoHome className='inline-block m-auto text-[20px]' /> <span className='opacity-[0] lg:opacity-[100] md:opacity-[100] sm:opacity-0'>Home</span></p>
               </Link>
             </a>
           </div>
           <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4">
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
-            <Link to="/Home">
+            <Link to="/home">
                 <p><IoHome className='inline-block m-auto text-[20px]' /> <span className='opacity-[0] lg:opacity-[100] md:opacity-[100] sm:opacity-0'>Home</span></p>
               </Link>
             </a>
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
-            <Link to="/Home">
+            <Link to="/home">
                 <p><IoHome className='inline-block m-auto text-[20px]' /> <span className='opacity-[0] lg:opacity-[100] md:opacity-[100] sm:opacity-0'>Home</span></p>
               </Link>
             </a>
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
-            <Link to="/Home">
+            <Link to="/home">
                 <p><IoHome className='inline-block m-auto text-[20px]' /> <span className='opacity-[0] lg:opacity-[100] md:opacity-[100] sm:opacity-0'>Home</span></p>
               </Link>
             </a>

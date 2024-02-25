@@ -10,10 +10,12 @@ import Navbar from "./components/Pages/Navbar";
 import Footer from "./components/Pages/Footer";
 import Home from "./components/Pages/Home"
 import Ayurveda from "./components/Pages/Ayurveda"
-import Expert from "./components/Pages/Expert"
+// import Experts from "./components/Pages/Expert"
 import UserDash from "./components/Pages/UserDash";
 import ChatBot from "./components/ChatBot";
 import Signin from "./components/community/Signin";
+// import FitnessApp from "./components/Pages/Experts";
+import Expert from "./components/Pages/Expert";
 
 const Layout = () => {
   return (
@@ -22,7 +24,6 @@ const Layout = () => {
       <Outlet></Outlet>
       <ChatBot/>
       <Footer/>
-     
     </div>
   );
 };
@@ -46,7 +47,7 @@ const router = createBrowserRouter([
         element: <Ayurveda/>
       },
       {
-        path: "/expert",
+        path: "/experts",
         element: <Expert/>
       },
       {

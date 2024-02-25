@@ -49,7 +49,7 @@ const Navbar = () => {
               <Link to='/sigin' ><Button name='Log in'></Button></Link>
             ) : (
               <Link to={`/profile/${user?.uid} `}>
-                <FaRegUserCircle className="h-[50px] w-[50px] text-black/25" />
+                <FaRegUserCircle className="h-[40px] w-[40px]  text-[#6a65ff]" />
               </Link>
             )}
           </li>

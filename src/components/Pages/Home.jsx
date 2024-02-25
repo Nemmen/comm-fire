@@ -8,12 +8,15 @@ import psych from '../svgs/9.svg'
 import legal from '../svgs/18.svg'
 
 import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 import SimpleSlider from "./Slider";
 import Card from "./Card";
 import ScrollCarousell from "./ScrollCarousel";
 import AyurHome from "./AyurHome";
 
 const Home = () => {
+  const arr = []
+  console.log(arr)
   return (
     <section className='scroll-smooth'>
       <div className="flex w-[87%] justify-center items-center m-auto lg:h-[100vh] md:h-[100vh] sm:h-[100vh]">

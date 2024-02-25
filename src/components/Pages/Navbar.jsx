@@ -46,12 +46,15 @@ const Navbar = () => {
           </li>
           <li className="">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <Link to="/profile">
               <FaRegUserCircle className="h-[50px] w-[50px] text-black/25"/>
             </Link>
                 
               </li>
 =======
+=======
+>>>>>>> b7f52c83b949f9abd40a8d261183c1111e2b05df
             {user === null ? (
               <Link to="/sigin">
                 <Button name="Log in"></Button>
@@ -62,7 +65,10 @@ const Navbar = () => {
               </Link>
             )}
           </li>
+<<<<<<< HEAD
 >>>>>>> aryan
+=======
+>>>>>>> b7f52c83b949f9abd40a8d261183c1111e2b05df
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
           {toggle ? (

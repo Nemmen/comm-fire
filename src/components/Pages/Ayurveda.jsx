@@ -1,9 +1,10 @@
 import React from 'react'
 import Button from './Button'
-import Hero from '../svgs/5.svg'
+import Hero from '../svgs/Mental health-bro.svg'
 import AyurCards from './AyurCards'
 import Oneself from './Oneself'
 import ScrollCarousell from './ScrollCarousel'
+
 
 const Ayurveda = () => {
   return (
@@ -12,13 +13,13 @@ const Ayurveda = () => {
         <div className="flex gap-5 flex-wrap-reverse w-full sm:px-0  px-3 sm:mt-0 justify-center sm:flex-nowrap items-center">
           <div className="lg:w-[50%] md:w-[50%]">
             <h1 className=" text-[40px] font-bold leading-10">
-            Welcome to 
-              <br /><span className="text-[48px]" style={{ color: "#6964fa" }}>Empower</span><span className="text-black text-[48px]">Mend</span>
+            Heal With
+              <br /><span className="text-[48px]" style={{ color: "#6964fa" }}>Ayurveda</span><span className="text-black text-[48px]"></span>
             </h1>
             <hr className="block h-[2px] bg-violet-950"/>
             <br />
             <p className="font-medium ">
-            A <span className="text-[#6964fa]">supportive community</span> dedicated to healing and empowerment for survivors of abuse and harassment. 
+            We offer a<span className="text-[#6964fa]"> holistic approch to solve your problem</span>  
             <br/>
             <br/>
             <span className="font-normal">Join us in breaking the silence, finding strength in solidarity, and reclaiming hope for a brighter future.</span>

@@ -3,15 +3,11 @@ import Button from "./Button";
 
 import Hero from '../svgs/5.svg'
 import about from '../svgs/14.svg'
-<<<<<<< HEAD
-import {Link} from "react-router-dom"
-=======
 import aboo from '../svgs/8.svg'
 import psych from '../svgs/9.svg'
 import legal from '../svgs/18.svg'
 
 
->>>>>>> ff46a085aecaed880b51acfcc8ce2b6bf2098440
 import SimpleSlider from "./Slider";
 import Card from "./Card";
 import ScrollCarousell from "./ScrollCarousel";

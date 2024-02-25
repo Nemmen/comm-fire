@@ -14,7 +14,7 @@ function OurServices() {
           <p style={{ marginTop: '20px', fontSize: '1rem' }}>
             Welcome to <b>Empowermend</b>, your trusted platform for support, guidance, and empowerment. We understand that the journey to justice and emotional well-being can often be a daunting one, and that's why we're here to make it easier for you.
 
-            At SolutionNexus, we believe in a world where every individual has the right to live free from harassment, discrimination, and fear. Our mission is to provide a safe and welcoming space for those who seek assistance, whether it's in the form of legal advice, emotional support, or valuable resources.
+            At EmpowerMend, we believe in a world where every individual has the right to live free from harassment, discrimination, and fear. Our mission is to provide a safe and welcoming space for those who seek assistance, whether it's in the form of legal advice, emotional support, or valuable resources.
           </p>
         </div>
         <div style={{ position: 'absolute', top: '160px', left: '50vw', width: '40vw' }}>

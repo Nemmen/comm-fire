@@ -1,5 +1,6 @@
 
 import React from 'react';
+import exp from "../svgs/empowermend logo (3).png"
 import { FaFacebook } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
@@ -9,7 +10,7 @@ const ExpertDefault = () => {
     <div className='body'>
       <div className="p-5 border rounded-md shadow-lg hover:shadow-xl text-gray-500 w-full m-2 ">
         <div className="flex items-center">
-          <img className="w-16 h-16 rounded mr-4 " src="https://loremflickr.com/320/320/girl" alt="jane" />
+          <img className="w-16 h-16 rounded mr-4 " src={exp} alt="jane" />
           <div className="text-sm">
             <a href="#"
               className="font-medium leading-none text-gray-900 hover:text-indigo-600 transition duration-500 ease-in-out">

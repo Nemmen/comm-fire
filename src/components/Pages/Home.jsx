@@ -3,13 +3,20 @@ import Button from "./Button";
 
 import Hero from '../svgs/5.svg'
 import about from '../svgs/14.svg'
+import aboo from '../svgs/8.svg'
+import psych from '../svgs/9.svg'
+import legal from '../svgs/18.svg'
 
+import {Link} from "react-router-dom"
+// import { Link } from "react-router-dom";
 import SimpleSlider from "./Slider";
 import Card from "./Card";
 import ScrollCarousell from "./ScrollCarousel";
 import AyurHome from "./AyurHome";
 
 const Home = () => {
+  const arr = []
+  console.log(arr)
   return (
     <section className='scroll-smooth'>
       <div className="flex w-[87%] justify-center items-center m-auto lg:h-[100vh] md:h-[100vh] sm:h-[100vh]">
@@ -51,7 +58,7 @@ const Home = () => {
             <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 p-[12px] lg:gap-6 md:gap-4 lg:p-[60px] md:p-[40px] sm:p-[10px] lg:text-center">
               
               <div className="lg:w-[76%] md:w-[80%] sm:w-[76%] sm:mt-6 sm:mx-auto sm:text-center">
-                <img src={about} alt="" className="object-center object-contain rounded-full " />
+                <img src={aboo} alt="" className="object-center object-contain rounded-full mb-[30px]" />
               </div>
 
               <div className="my-auto lg:w-[76%]">
@@ -100,7 +107,7 @@ const Home = () => {
         </div>
         <div className="grid lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 p-[12px] lg:gap-6 md:gap-4 lg:p-[60px] md:p-[40px] sm:p-[10px] lg:text-center">
           <div className="lg:w-[81%] md:w-[81%] sm:w-[76%] sm:mt-6 sm:mx-auto sm:text-center">
-            <Card/>
+            <Card img={psych} text='-Psych Expert' ></Card>
           </div>
           <div className="my-auto lg:w-[76%]">
             <p className="text-start sm:ms-8 md:ms-8 lg:ps-16 lg:text-[16px]">Bring a deep understanding of the human mind and emotions to the table. They can provide insights into the psychological impact of abuse and harassment, offer coping strategies, and guide individuals towards healing and resilience.</p>
@@ -112,7 +119,7 @@ const Home = () => {
             <p className="text-start sm:ms-8 md:ms-8 lg:ps-16 lg:text-[16px] ">Offer expertise in navigating the complex legal aspects of abuse and harassment. They can provide information on legal rights, options for seeking justice, and guidance on the legal processes involved in such cases. Their knowledge can empower individuals to understand and assert their legal rights in the face of abuse and harassment.</p>
           </div>
           <div className="lg:w-[81%] md:w-[81%] sm:w-[76%] sm:mt-6 sm:mx-auto sm:text-center">
-            <Card/>
+          <Card img={legal} text='-Legal Expert'></Card>
           </div>
         </div>
         
@@ -150,7 +157,10 @@ const Home = () => {
                 Together, we can build a community of resilience, compassion, and empowerment.
                 </p>
                 <div className="text-end mt-4">
-                  <Button name="Explore Now"></Button>
+                  <Link to="/community">
+                    <Button name="Explore Now"></Button>
+                  </Link>
+                  
                 </div>
               </div>
             </div>

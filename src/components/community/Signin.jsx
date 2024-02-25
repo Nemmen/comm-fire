@@ -6,14 +6,13 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 import { auth , db  } from "../../firebase";
-import { collection, getDoc} from "firebase/firestore";
-import { useAuthState } from "react-firebase-hooks/auth";
+import { useNavigate } from "react-router-dom";
 
-
-const Signin = ({setIsLoggedIn}) => {
+const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
- 
+  const navigate= useNavigate()
+
   // const [Username, setUsername] = useState("");
 
   
@@ -27,7 +26,8 @@ const Signin = ({setIsLoggedIn}) => {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
-    setIsLoggedIn(true)
+    navigate('/profile/'+user.uid)
+    
     // IdP data available using getAdditionalUserInfo(result)
     // ...
   }).catch((error) => {
@@ -48,9 +48,9 @@ const Signin = ({setIsLoggedIn}) => {
       .then((userCredential) => {
         // Signed up
         const user = userCredential.user;
-        setIsLoggedIn(true)
+
+        navigate('/profile/'+user.uid)
         toast.success('Signed Up!');
-        
         // ...
       })
       .catch((error) => {

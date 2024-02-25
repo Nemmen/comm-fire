@@ -6,8 +6,11 @@ import Button from "./Button";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoCloseOutline } from "react-icons/io5";
 import { FaRegUserCircle } from "react-icons/fa";
-
+import { useAuthState } from "react-firebase-hooks/auth";
+import { auth } from "../../firebase";
 const Navbar = () => {
+  const [user] = useAuthState(auth);
+
   const [toggle, setToggle] = useState(false);
   return (
     <section className=" text-center flex justify-center items-center scroll-smooth">
@@ -42,26 +45,37 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="">
+<<<<<<< HEAD
             <Link to="/profile">
               <FaRegUserCircle className="h-[50px] w-[50px] text-black/25"/>
             </Link>
                 
               </li>
+=======
+            {user === null ? (
+              <Link to="/sigin">
+                <Button name="Log in"></Button>
+              </Link>
+            ) : (
+              <Link to={`/profile/${user?.uid} `}>
+                <FaRegUserCircle className="h-[40px] w-[40px]  text-[#6a65ff]" />
+              </Link>
+            )}
+          </li>
+>>>>>>> aryan
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
-          {toggle ? 
-            (
+          {toggle ? (
             <IoCloseOutline
               className="w-[28px] h-[28px] mr-[20px]"
               onClick={() => setToggle((prev) => !prev)}
             />
-          ) :(
-          <FaBarsStaggered
-          className="w-[28px] h-[28px] mr-[20px]"
-          onClick={() => setToggle((prev) => !prev)}
-        />
-      ) 
-        }
+          ) : (
+            <FaBarsStaggered
+              className="w-[28px] h-[28px] mr-[20px]"
+              onClick={() => setToggle((prev) => !prev)}
+            />
+          )}
 
           <div
             className={`${
@@ -92,9 +106,16 @@ const Navbar = () => {
               <li
                 className={`font-poppins  font-normal cursor-pointer text-[18px] `}
               >
-                <Link to="/profile">Profile</Link>
+                {user === null ? (
+                  <Link to="/sigin">
+                    <Button name="Log in"></Button>
+                  </Link>
+                ) : (
+                  <Link to={`/profile/${user?.uid} `}>
+                    <Link to={`/profile/${user?.uid} `}>Profile</Link>
+                  </Link>
+                )}
               </li>
-              
             </ul>
           </div>
         </div>

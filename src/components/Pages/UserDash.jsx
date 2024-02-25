@@ -1,10 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { IoHome } from "react-icons/io5";
+import { TbLogout2 } from "react-icons/tb";
+
 const UserDash = () => {
   return (
     <div>
-         <div className="bg-orange-100 min-h-screen">
+      <div className='p-4'></div>
+         <div className="bg-orange-100 min-h-screen rounded-lg">
       {/* <div className="fixed bg-white text-blue-800 px-10 py-1 z-10 w-full"> */}
         {/* <div className="flex items-center justify-between py-2 text-5x1">
           <div className="font-bold text-blue-900 text-xl">Admin<span className="text-orange-600">Panel</span></div>
@@ -16,7 +19,7 @@ const UserDash = () => {
           </div>
         </div> */}
       {/* </div> */}
-      <div className="flex flex-row pt-24 px-10 pb-4">
+      <div className="flex flex-row pt-24 px-4 pb-4">
         <div className="w-2/12 mr-6">
           <div className="bg-white rounded-xl shadow-lg mb-6 px-6 py-4">
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
@@ -48,7 +51,7 @@ const UserDash = () => {
             </a>
             <a href="" className="inline-block text-gray-600 hover:text-black my-4 w-full">
             <Link to="/Home">
-                <p><IoHome className='inline-block m-auto text-[20px]' /> <span className='opacity-[0] lg:opacity-[100] md:opacity-[100] sm:opacity-0'>Home</span></p>
+                <p><TbLogout2 className='inline-block m-auto text-[20px]' /> <span className='opacity-[0] lg:opacity-[100] md:opacity-[100] sm:opacity-0'>Log Out</span></p>
               </Link>
             </a>
           </div>
@@ -72,6 +75,7 @@ const UserDash = () => {
         </div>
       </div>
     </div>
+    <div className='p-4'></div>
     </div>
    
   );

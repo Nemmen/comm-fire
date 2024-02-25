@@ -10,7 +10,7 @@ import { FaRegUserCircle } from "react-icons/fa";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   return (
-    <section className=" text-center flex justify-center items-center scroll-smooth">
+    <section className=" text-center flex shadow-md justify-center items-center scroll-smooth">
       <nav className="sm:w-[90%] w-full flex py-2 justify-between items-center">
         <img src={empowermend} alt="" className="w-[80px]" />
         <ul className="list-none sm:flex gap-4 hidden justify-center ms-5 items-center flex-1">
@@ -42,7 +42,9 @@ const Navbar = () => {
             </Link>
           </li>
           <li className="">
+            <Link to="/profile">
                 <FaRegUserCircle className="h-[50px] w-[50px] text-black/25"/>
+            </Link>
               </li>
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">

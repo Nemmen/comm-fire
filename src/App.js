@@ -10,7 +10,7 @@ import Navbar from "./components/Pages/Navbar";
 import Footer from "./components/Pages/Footer";
 import Home from "./components/Pages/Home"
 import Ayurveda from "./components/Pages/Ayurveda"
-import Expert from "./components/Pages/Expert"
+import Expert from "./components/Pages/Experts"
 import UserDash from "./components/Pages/UserDash";
 import ChatBot from "./components/ChatBot";
 import Signin from "./components/community/Signin";
@@ -46,7 +46,7 @@ const router = createBrowserRouter([
         element: <Ayurveda/>
       },
       {
-        path: "/expert",
+        path: "/Experts",
         element: <Expert/>
       },
       {

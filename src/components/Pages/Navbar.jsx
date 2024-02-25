@@ -46,7 +46,9 @@ const Navbar = () => {
           </li>
           <li className="">
             {user === null ? (
-              <Link to='/sigin' ><Button name='Log in'></Button></Link>
+              <Link to="/sigin">
+                <Button name="Log in"></Button>
+              </Link>
             ) : (
               <Link to={`/profile/${user?.uid} `}>
                 <FaRegUserCircle className="h-[40px] w-[40px]  text-[#6a65ff]" />
@@ -96,7 +98,15 @@ const Navbar = () => {
               <li
                 className={`font-poppins  font-normal cursor-pointer text-[18px] `}
               >
-                <Link to={`/profile/${user?.uid} `}>Profile</Link>
+                {user === null ? (
+                  <Link to="/sigin">
+                    <Button name="Log in"></Button>
+                  </Link>
+                ) : (
+                  <Link to={`/profile/${user?.uid} `}>
+                    <Link to={`/profile/${user?.uid} `}>Profile</Link>
+                  </Link>
+                )}
               </li>
             </ul>
           </div>

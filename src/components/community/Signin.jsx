@@ -6,12 +6,12 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 import { auth , db  } from "../../firebase";
-
-
+import { useNavigate } from "react-router-dom";
 
 const Signin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate= useNavigate()
 
   // const [Username, setUsername] = useState("");
 
@@ -26,6 +26,7 @@ const Signin = () => {
     const token = credential.accessToken;
     // The signed-in user info.
     const user = result.user;
+    navigate('/profile/'+user.uid)
     
     // IdP data available using getAdditionalUserInfo(result)
     // ...
@@ -48,8 +49,8 @@ const Signin = () => {
         // Signed up
         const user = userCredential.user;
 
+        navigate('/profile/'+user.uid)
         toast.success('Signed Up!');
-        
         // ...
       })
       .catch((error) => {

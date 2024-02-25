@@ -81,7 +81,7 @@ const Rightside = () => {
   return (
     <div className="divide-y divide-gray-300">
       {
-        (user === null) ? (<div className="mb-[30px] text-xl text-center text-[#6a65ff]">यदि आप जीवन की चिंताओं से जीतना चाहते हैं तो, इस क्षण में जिएं, इस सांस में जिए।</div>) : (
+        (user === null) ? (<div className="mb-[30px] text-xl text-center text-[#6a65ff]">You are not alone. Your pain is valid, your journey is unique, and your healing is possible.</div>) : (
 
           <div className="bg-white p-4 rounded-lg ">
             <div className="relative bg-inherit">

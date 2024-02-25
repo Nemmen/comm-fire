@@ -1,6 +1,7 @@
 
 import React from 'react';
 import svg12 from '../svgs/12.svg'
+import yoga from '../svgs/Yoga with face masks-bro.svg'
 function AyurCards() {
   return (
     <div className="max-w-screen-xl mx-auto py-8 px-4 lg:py-16 lg:px-6">
@@ -11,7 +12,7 @@ function AyurCards() {
       <div className="flex md:flex-wrap flex-col md:flex-row">
         {/* can help image */}
         <div className="mr-0 md:mr-8 mb-6 md:mb-0">
-          <img className="w-1/2 md:w-full mx-auto object-contain" src="https://placeholder.pics/svg/400" alt="can_help_banner" />
+          <img className="w-1/2 md:w-full mx-auto object-contain" src={yoga} width="400px" height="400px" alt="can_help_banner" />
         </div>
         {/* end can help image */}
         

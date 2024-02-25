@@ -3,7 +3,7 @@ import Button from "./Button";
 
 import Hero from '../svgs/5.svg'
 import about from '../svgs/14.svg'
-
+import {Link} from "react-router-dom"
 import SimpleSlider from "./Slider";
 import Card from "./Card";
 import ScrollCarousell from "./ScrollCarousel";
@@ -150,7 +150,10 @@ const Home = () => {
                 Together, we can build a community of resilience, compassion, and empowerment.
                 </p>
                 <div className="text-end mt-4">
-                  <Button name="Explore Now"></Button>
+                  <Link to="/community">
+                    <Button name="Explore Now"></Button>
+                  </Link>
+                  
                 </div>
               </div>
             </div>

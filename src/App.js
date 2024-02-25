@@ -11,12 +11,16 @@ import Footer from "./components/Pages/Footer";
 import Home from "./components/Pages/Home"
 import Ayurveda from "./components/Pages/Ayurveda"
 import Expert from "./components/Pages/Expert"
+import UserDash from "./components/Pages/UserDash";
+import ChatBot from "./components/ChatBot";
+import Signin from "./components/community/Signin";
 
 const Layout = () => {
   return (
     <div className="">
       <Navbar/>
       <Outlet></Outlet>
+      <ChatBot/>
       <Footer/>
      
     </div>
@@ -44,6 +48,13 @@ const router = createBrowserRouter([
       {
         path: "/expert",
         element: <Expert/>
+      },
+      {
+        path: "/profile/:id",
+        element: <UserDash/>
+      },{
+        path : "/sigin",
+        element : <Signin />
       }
      
     ],

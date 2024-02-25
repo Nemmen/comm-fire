@@ -3,22 +3,21 @@ import { Link, useNavigate } from "react-router-dom";
 import { auth } from "../../firebase";
 import { signOut } from "firebase/auth";
 import toast from "react-hot-toast";
+import { useAuthState } from "react-firebase-hooks/auth";
 
-const Leftside = ({setIsLoggedIn}) => {
-
+const Leftside = () => {
+  const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const logoutHandle = async () => {
-
-    await signOut(auth).then(()=>{
-      navigate("/community")
-      toast.success(" Logged out successfully!")
-      setIsLoggedIn(false)
-
-    }).catch((error) => {
-      toast.error(error)
-    });
- 
-  }
+    await signOut(auth)
+      .then(() => {
+        navigate("/community");
+        toast.success(" Logged out successfully!");
+      })
+      .catch((error) => {
+        toast.error(error);
+      });
+  };
   return (
     <div className=" lg:col-span-3 lg:block xl:col-span-2">
       <nav
@@ -74,7 +73,7 @@ const Leftside = ({setIsLoggedIn}) => {
             </svg>
             <span className="truncate">Popular</span>
           </Link>
-        
+
           <Link
             to="#"
             className="text-gray-700 hover:bg-gray-50 group flex items-center px-3 py-2 text-sm font-medium rounded-md"
@@ -118,27 +117,49 @@ const Leftside = ({setIsLoggedIn}) => {
             <span className="truncate">Trending</span>
           </Link>
         </div>
-        <div className="pt-10">
-          <p
-            className="px-3 text-sm font-medium text-gray-500"
-            id="communities-headline"
-          >
-            Heal or seek justice we are with you
-          </p>
-          <div onClick={logoutHandle}
-            className="mt-3 space-y-2"
-            aria-labelledby="communities-headline"
-          >
-            <Link
-              to="#"
-              className="group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+        {user === null ? (
+          <div className="pt-10">
+            <p
+              className="px-3 text-sm font-medium text-gray-500"
+              id="communities-headline"
             >
-              <span className="truncate">Logout</span>
-            </Link>
-
-           
+              Heal or seek justice we are with you , let you be someone's heal and let someone be your justice ..
+            </p>
+            <div
+             
+              className="mt-3 space-y-2"
+              aria-labelledby="communities-headline"
+            >
+              <Link
+                to="/signin"
+                className="group flex items-center rounded-md  px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+              >
+                <span className="truncate">Log in</span>
+              </Link>
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="pt-10">
+            <p
+              className="px-3 text-sm font-medium text-gray-500"
+              id="communities-headline"
+            >
+               Heal or seek justice we are with you , let you be someone's heal and let someone be your justice ..
+            </p>
+            <div
+              onClick={logoutHandle}
+              className="mt-3 space-y-2"
+              aria-labelledby="communities-headline"
+            >
+              <Link
+                to="#"
+                className="group flex items-center rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900"
+              >
+                <span className="truncate">Logout</span>
+              </Link>
+            </div>
+          </div>
+        )}
       </nav>
     </div>
   );

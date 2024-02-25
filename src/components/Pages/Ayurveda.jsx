@@ -1,9 +1,10 @@
 import React from 'react'
 import Button from './Button'
-import Hero from '../svgs/5.svg'
+import Hero from '../svgs/Mental health-bro.svg'
 import AyurCards from './AyurCards'
 import Oneself from './Oneself'
 import ScrollCarousell from './ScrollCarousel'
+
 
 const Ayurveda = () => {
   return (

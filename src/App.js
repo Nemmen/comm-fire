@@ -13,6 +13,7 @@ import Ayurveda from "./components/Pages/Ayurveda"
 import Expert from "./components/Pages/Expert"
 import UserDash from "./components/Pages/UserDash";
 import ChatBot from "./components/ChatBot";
+import Signin from "./components/community/Signin";
 
 const Layout = () => {
   return (
@@ -49,8 +50,11 @@ const router = createBrowserRouter([
         element: <Expert/>
       },
       {
-        path: "/profile",
+        path: "/profile/:id",
         element: <UserDash/>
+      },{
+        path : "/sigin",
+        element : <Signin />
       }
      
     ],

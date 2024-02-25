@@ -19,16 +19,12 @@ const Rightside = () => {
   const [stories, setStories] = useState([]);
   const [entrie, setEntrie] = useState("");
   const [user] = useAuthState(auth);
-  // console.log(user.uid)
   const usersRef = collection(db, "users")
   const storyRef = collection(db, "stories");
   const [desc, setDesc] = useState("");
   const changeHandle = (e) => {
     setDesc(e.target.value);
   };
-
-
-
   const addHandle = async () => {
     try {
       await addDoc(storyRef , {
@@ -45,15 +41,17 @@ const Rightside = () => {
     }
     
   };
-  const getStory = async () => {
-    const data = await getDocs(query(storyRef, orderBy("timestamp", "desc")));
-
-    setStories(
-      data.docs.map((doc) => ({ ...doc.data(), id: doc.id, key: doc.id }))
-    );
-    }
+  
 
     useEffect(()=>{
+      const getStory = async () => {
+        const data = await getDocs(query(storyRef, orderBy("timestamp", "desc")));
+    
+        setStories(
+          data.docs.map((doc) => ({ ...doc.data(), id: doc.id, key: doc.id }))
+        );
+        }
+
       getStory()
     },[stories])
 

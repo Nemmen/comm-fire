@@ -62,6 +62,7 @@ const apiKey = "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"
       body: JSON.stringify(apiRequestBody)
     }).then((data)=>{
       return data.json()
+
     }).then((data)=>{
       setMessages(
         [...chatMessages, {

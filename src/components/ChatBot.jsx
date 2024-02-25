@@ -5,7 +5,7 @@ import { MainContainer, ChatContainer, MessageList, Message,MessageInput, Typing
 
 const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
-const apiKey = "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"
+const apiKey = "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"
 
   const [messages, setMessages] = useState([
     {
@@ -56,7 +56,7 @@ const apiKey = "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"
     await fetch("https://api.openai.com/v1/chat/completions",{
       method:"POST",
       headers:{
-        "Authorization":"Bearer "+apiKey,
+        "Authorization":"Bearer "+ apiKey,
         "Content-Type": "application/json"
       },
       body: JSON.stringify(apiRequestBody)

@@ -15,8 +15,8 @@ import UserDash from "./components/Pages/UserDash";
 import ChatBot from "./components/ChatBot";
 import Signin from "./components/community/Signin";
 // import FitnessApp from "./components/Pages/Experts";
-import Expert from "./components/Pages/Expert";
-
+// import Expert from "./components/Pages/Expert";
+import Experts from "./components/Pages/Experts"
 const Layout = () => {
   return (
     <div className="">
@@ -48,7 +48,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/experts",
-        element: <Expert/>
+        element: <Experts/>
       },
       {
         path: "/profile/:id",
